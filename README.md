@@ -41,7 +41,7 @@ The creators of this tool are not liable for any misuse of fonts or violations o
 Install the required packages using pip:
 
 ```bash
-pip install requests tqdm beautifulsoup4 fonttools
+pip3 install requests tqdm beautifulsoup4 fonttools
 ```
 
 ### Google Fonts API Key
@@ -59,7 +59,7 @@ You'll need a Google Fonts API key to use the script:
 ### Basic Usage
 
 ```bash
-python font.py
+python3 font.py
 ```
 
 The script will guide you through selecting a DaVinci Resolve path to scan.
@@ -77,18 +77,18 @@ The script will guide you through selecting a DaVinci Resolve path to scan.
 Scan a specific path for both file types:
 
 ```bash
-python font.py /path/to/files
+python3 font.py /path/to/files
 ```
 
 Scan only .setting files with detailed output:
 
 ```bash
-python font.py --settingfiles --verbose /path/to/files
+python3 font.py --settingfiles --verbose /path/to/files
 ```
 
 Check missing fonts without downloading:
 
 ```bash
-python font.py --dryrun
+python3 font.py --dryrun
 ```
 

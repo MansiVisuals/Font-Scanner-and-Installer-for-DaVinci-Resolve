@@ -62,7 +62,7 @@ def get_google_fonts_api_key():
         sys.exit(1)
     
     # Save the API key for future use
-    save_key = input("💾 Save this API key for future use? (y/n): ").strip().lower()  # Fixed: removed extra parenthesis
+    save_key = input("💾 Save this API key for future use? (y/n): "):strip().lower()  # Fixed: removed extra parenthesis
     if save_key == 'y' or save_key == 'yes':
         try:
             key_file.write_text(api_key)
@@ -1233,3 +1233,8 @@ if __name__ == "__main__":
         # The download and install process is already handled in scan_all()
     else:
         print("\n✅ All required fonts are available.")
+    
+    # Add reminder to restart DaVinci Resolve
+    if not args.dryrun and missing_fonts:
+        print("\n⚠️ IMPORTANT: Please restart DaVinci Resolve to load the newly installed fonts!")
+        print("   Your projects should now display correctly with all required fonts.")
